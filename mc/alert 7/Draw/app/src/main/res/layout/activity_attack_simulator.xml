@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/targetIp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Target IP (e.g., 192.168.1.10)"
+        android:inputType="text"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attack Type:"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/attackTypeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/portScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Port Scan (TCP Connect)"/>
+
+        <RadioButton
+            android:id="@+id/sshBrute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SSH Brute-Force (simulated)"/>
+
+        <RadioButton
+            android:id="@+id/sqli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SQL Injection (HTTP GET)"/>
+
+        <RadioButton
+            android:id="@+id/pathTraversal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Path Traversal (HTTP GET)"/>
+
+        <RadioButton
+            android:id="@+id/httpScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HTTP Scanner (Nikto-like)"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/launchAttack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Launch Attack"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Results will appear here"
+        android:textSize="14sp"/>
+
+</LinearLayout>
